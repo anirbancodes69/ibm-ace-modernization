@@ -1,9 +1,13 @@
 require("dotenv").config();
 
 const app = require("./app");
+const logger = require("./utils/logger");
 
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Producer Service listening on port ${PORT}`);
+    logger.info("Producer Service started", {
+        port: PORT,
+        environment: process.env.NODE_ENV
+    });
 });

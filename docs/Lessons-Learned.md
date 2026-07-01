@@ -49,3 +49,9 @@
 - Added JSON middleware.
 - Implemented a health check endpoint.
 - Verified the service starts successfully.
+
+### Milestone 3
+
+- Introduced structured logging with Winston.
+- Centralized logging into a reusable logger module.
+- Replaced console logging with structured JSON logs.
