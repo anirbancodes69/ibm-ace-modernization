@@ -9,3 +9,17 @@ The Producer Service accepts HTTP requests and publishes events to Apache Kafka.
 - Generate correlation IDs
 - Publish events to Kafka
 - Return asynchronous responses
+
+## Endpoints
+
+### Health Check
+
+GET /health
+
+Response:
+
+```json
+{
+  "status": "UP",
+  "service": "producer-service"
+}

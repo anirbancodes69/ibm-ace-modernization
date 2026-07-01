@@ -42,3 +42,10 @@
   - Zod
   - UUID
 - Configured environment variables.
+
+### Milestone 2
+
+- Created the Express application.
+- Added JSON middleware.
+- Implemented a health check endpoint.
+- Verified the service starts successfully.
