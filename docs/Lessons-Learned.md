@@ -62,3 +62,9 @@
 - After bootstrapping, Kafka returns the advertised broker addresses.
 - Incorrect advertised listeners cause clients to fail even when the initial connection succeeds.
 - Dual listeners support both local development and Docker networking without changing application code.
+
+### Milestone 6
+
+- Added request validation using Zod.
+- Validation is implemented as reusable Express middleware.
+- Invalid requests are rejected before reaching business logic.
