@@ -1,3 +1,5 @@
+# Lessons Learned
+
 ## Sprint 1 - Docker Foundation
 
 ### Key Learnings
@@ -9,14 +11,20 @@
 - Configuration should be externalized using environment variables.
 - Infrastructure should be reproducible through code.
 
-## Sprint 2 - Kafka Broker
+---
 
-- Added a single-node Apache Kafka broker using KRaft mode.
-- Kafka runs as both broker and controller for local development.
-- Kafka data is persisted using a named Docker volume.
+## Sprint 2 - Apache Kafka Foundation
 
-## Sprint 2 - Milestone 1
+### Key Learnings
 
-- Successfully started Apache Kafka 4.0 in KRaft mode.
-- Verified broker startup through container logs.
-- Kafka is listening on port 9092 and ready to accept client connections.
+- Successfully deployed Apache Kafka 4.0 in KRaft mode using Docker Compose.
+- Created a Kafka topic (`order.created`).
+- Verified topic metadata and partition leadership.
+- Produced an event to Kafka.
+- Verified event persistence by inspecting Kafka log segments and offsets.
+- Learned to troubleshoot Kafka using:
+  - `kafka-topics.sh`
+  - `kafka-get-offsets.sh`
+  - `kafka-dump-log.sh`
+- Validated that the broker is healthy and storing events correctly.
+- Kafka CLI consumer behavior differed from expectations, but broker persistence and offsets confirmed correct operation.
