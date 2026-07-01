@@ -76,3 +76,10 @@
 - Automatically generates one when missing.
 - Returns the Correlation ID in the response header.
 - The same Correlation ID is propagated into Kafka events.
+
+### Milestone 8
+
+- Added centralized error handling middleware.
+- All API errors now return a consistent JSON response.
+- Correlation IDs are included in error responses.
+- Errors are logged using the shared Winston logger.
