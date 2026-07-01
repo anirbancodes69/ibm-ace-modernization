@@ -83,3 +83,10 @@
 - All API errors now return a consistent JSON response.
 - Correlation IDs are included in error responses.
 - Errors are logged using the shared Winston logger.
+
+### Milestone 9
+
+- Implemented graceful shutdown using SIGINT and SIGTERM.
+- Properly closes the HTTP server.
+- Disconnects the Kafka producer before exiting.
+- Prevents resource leaks during application shutdown.
