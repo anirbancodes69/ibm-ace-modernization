@@ -55,3 +55,10 @@
 - Introduced structured logging with Winston.
 - Centralized logging into a reusable logger module.
 - Replaced console logging with structured JSON logs.
+
+### Kafka Networking
+
+- Kafka clients connect to the bootstrap server first.
+- After bootstrapping, Kafka returns the advertised broker addresses.
+- Incorrect advertised listeners cause clients to fail even when the initial connection succeeds.
+- Dual listeners support both local development and Docker networking without changing application code.
