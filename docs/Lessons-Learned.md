@@ -68,3 +68,11 @@
 - Added request validation using Zod.
 - Validation is implemented as reusable Express middleware.
 - Invalid requests are rejected before reaching business logic.
+
+### Milestone 7
+
+- Added Correlation ID middleware.
+- Supports client-provided correlation IDs.
+- Automatically generates one when missing.
+- Returns the Correlation ID in the response header.
+- The same Correlation ID is propagated into Kafka events.

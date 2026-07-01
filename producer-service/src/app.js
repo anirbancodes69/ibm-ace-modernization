@@ -1,8 +1,11 @@
 const express = require("express");
 
 const orderRoutes = require("./routes/orderRoutes");
+const correlationId = require("./middleware/correlationId");
 
 const app = express();
+
+app.use(correlationId);
 
 app.use(express.json());
 

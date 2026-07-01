@@ -1,10 +1,9 @@
-const { v4: uuid } = require("uuid");
 const { publishOrder } = require("../services/orderService");
 
 async function createOrder(req, res, next) {
     try {
         const order = {
-            correlationId: uuid(),
+            correlationId: req.correlationId,
             ...req.body,
             createdAt: new Date().toISOString(),
         };
