@@ -28,3 +28,17 @@
   - `kafka-dump-log.sh`
 - Validated that the broker is healthy and storing events correctly.
 - Kafka CLI consumer behavior differed from expectations, but broker persistence and offsets confirmed correct operation.
+
+## Sprint 3 - Producer Service
+
+### Milestone 1
+
+- Initialized the Producer Service.
+- Created a scalable folder structure.
+- Installed core dependencies:
+  - Express
+  - KafkaJS
+  - Winston
+  - Zod
+  - UUID
+- Configured environment variables.
