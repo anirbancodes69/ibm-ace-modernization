@@ -42,6 +42,22 @@ services:
     networks:
       - modernization-network
 
+  producer-service:
+    build:
+      context: ./producer-service
+      dockerfile: Dockerfile
+    container_name: modernization-producer
+    restart: unless-stopped
+    env_file:
+      - ./producer-service/.env.docker
+    depends_on:
+      kafka:
+        condition: service_started
+    ports:
+      - "3000:3000"
+    networks:
+      - modernization-network
+
 volumes:
   postgres-data:
   kafka-data:

@@ -90,3 +90,10 @@
 - Properly closes the HTTP server.
 - Disconnects the Kafka producer before exiting.
 - Prevents resource leaks during application shutdown.
+
+### Milestone 10
+
+- Dockerized the Producer Service.
+- The service now runs entirely inside Docker Compose.
+- Uses the Docker network to communicate with Kafka.
+- Environment-specific configuration is handled through `.env.docker`.
