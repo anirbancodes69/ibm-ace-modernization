@@ -179,3 +179,18 @@ This document captures the important architectural, infrastructure, and implemen
 - Single-node Kafka requires explicit replication settings for internal topics.
 - Kafka should be validated inside Docker before implementing application logic.
 - Verify consumer groups before debugging KafkaJS consumers.
+
+
+## Sprint 5 - Milestone 1
+
+Avoid placing business logic directly inside Kafka consumers.
+
+The consumer should only:
+
+- Receive events
+- Validate payloads
+- Delegate processing
+
+Business orchestration belongs in a dedicated service layer, while message transformation belongs in a transformer layer.
+
+This separation closely mirrors IBM App Connect Enterprise, where MQ Input, Compute, and Mapping nodes each have distinct responsibilities.

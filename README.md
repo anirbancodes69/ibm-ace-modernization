@@ -213,3 +213,14 @@ Client
 → Producer Service
 → Apache Kafka
 → Consumer Service
+
+Kafka Consumer
+      │
+      ▼
+Order Service
+      │
+      ▼
+Order Transformer
+      │
+      ▼
+Canonical Order
