@@ -157,3 +157,11 @@ This document captures the important architectural, infrastructure, and implemen
 - Producer and Consumer should share common logging standards.
 - Separate environment files simplify local and Docker execution.
 - Mirroring project structure across services improves maintainability.
+
+## Kafka Validation
+
+### Key Learnings
+
+- Validate Kafka independently before debugging application consumers.
+- A console consumer is the fastest way to verify end-to-end message flow.
+- Kafka consumer groups were verified before implementing the Consumer Service.
