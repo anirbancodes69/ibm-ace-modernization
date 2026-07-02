@@ -242,3 +242,21 @@ Order Repository
       │
       ▼
 PostgreSQL
+
+
+Kafka Consumer
+      │
+      ▼
+Order Service
+      │
+      ▼
+Order Transformer
+      │
+      ▼
+Order Validator
+      │
+      ▼
+Order Repository
+      │
+      ▼
+PostgreSQL

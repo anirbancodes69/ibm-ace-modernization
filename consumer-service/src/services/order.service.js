@@ -1,5 +1,6 @@
 const logger = require("../utils/logger");
 const { transformOrder } = require("../transformers/order.transformer");
+const { validateOrder } = require("../validators/order.validator");
 const { saveOrder } = require("../repositories/order.repository");
 
 async function processOrder(order) {
@@ -10,6 +11,12 @@ async function processOrder(order) {
   const canonicalOrder = transformOrder(order);
 
   logger.info("Canonical order created", canonicalOrder);
+
+  validateOrder(canonicalOrder);
+
+  logger.info("Canonical order validated", {
+    orderId: canonicalOrder.orderId,
+  });
 
   await saveOrder(canonicalOrder);
 

@@ -55,3 +55,13 @@ Order Repository
 ↓
 
 PostgreSQL
+
+## Sprint 5 - Milestone 3
+
+Introduced canonical message validation before persistence.
+
+IBM ACE Mapping
+
+Validation Node (Compute)
+        ↓
+Order Validator (Zod)

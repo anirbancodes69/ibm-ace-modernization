@@ -212,3 +212,9 @@ The event processing pipeline now follows:
 Kafka Consumer → Service → Transformer → Repository → PostgreSQL
 
 This mirrors IBM ACE Database Node responsibilities while keeping the service layer focused on orchestration.
+
+## Sprint 5 - Milestone 3
+
+Validation should occur after message transformation and before persistence.
+
+By validating the canonical model instead of the incoming event, downstream systems always receive a consistent enterprise data model regardless of the source payload.
