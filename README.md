@@ -213,3 +213,50 @@ Client
 → Producer Service
 → Apache Kafka
 → Consumer Service
+
+Kafka Consumer
+      │
+      ▼
+Order Service
+      │
+      ▼
+Order Transformer
+      │
+      ▼
+Canonical Order
+
+
+Kafka Consumer
+      │
+      ▼
+Order Service
+      │
+      ▼
+Order Transformer
+      │
+      ▼
+Canonical Order
+      │
+      ▼
+Order Repository
+      │
+      ▼
+PostgreSQL
+
+
+Kafka Consumer
+      │
+      ▼
+Order Service
+      │
+      ▼
+Order Transformer
+      │
+      ▼
+Order Validator
+      │
+      ▼
+Order Repository
+      │
+      ▼
+PostgreSQL

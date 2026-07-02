@@ -179,3 +179,42 @@ This document captures the important architectural, infrastructure, and implemen
 - Single-node Kafka requires explicit replication settings for internal topics.
 - Kafka should be validated inside Docker before implementing application logic.
 - Verify consumer groups before debugging KafkaJS consumers.
+
+
+## Sprint 5 - Milestone 1
+
+Avoid placing business logic directly inside Kafka consumers.
+
+The consumer should only:
+
+- Receive events
+- Validate payloads
+- Delegate processing
+
+Business orchestration belongs in a dedicated service layer, while message transformation belongs in a transformer layer.
+
+This separation closely mirrors IBM App Connect Enterprise, where MQ Input, Compute, and Mapping nodes each have distinct responsibilities.
+
+## Sprint 5 - Milestone 2
+
+Repositories encapsulate persistence logic and isolate database operations from business services.
+
+The Order Service now focuses only on orchestration, while the Order Repository handles SQL interaction.
+
+This separation improves maintainability and mirrors IBM ACE Database node responsibilities.
+
+## Sprint 5 - Milestone 2
+
+A repository layer was introduced to isolate database operations from business orchestration.
+
+The event processing pipeline now follows:
+
+Kafka Consumer → Service → Transformer → Repository → PostgreSQL
+
+This mirrors IBM ACE Database Node responsibilities while keeping the service layer focused on orchestration.
+
+## Sprint 5 - Milestone 3
+
+Validation should occur after message transformation and before persistence.
+
+By validating the canonical model instead of the incoming event, downstream systems always receive a consistent enterprise data model regardless of the source payload.
