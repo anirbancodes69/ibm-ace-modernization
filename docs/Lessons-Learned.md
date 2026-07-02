@@ -218,3 +218,17 @@ This mirrors IBM ACE Database Node responsibilities while keeping the service la
 Validation should occur after message transformation and before persistence.
 
 By validating the canonical model instead of the incoming event, downstream systems always receive a consistent enterprise data model regardless of the source payload.
+
+## Sprint 6 - Milestone 1
+
+Introducing an API Gateway decouples clients from backend services.
+
+Clients communicate only with Kong, allowing routing, authentication, rate limiting, and observability to be implemented centrally without changing application code.
+
+### Sprint 6 - Kong Routing
+
+Kong's `strip_path` setting determines whether the matched route prefix is removed before forwarding the request to the upstream service.
+
+For services that expose versioned REST endpoints (e.g., `/api/v1/orders`), `strip_path: false` preserves the original request path, ensuring the upstream service receives the expected endpoint.
+
+Incorrect configuration can result in the upstream receiving `/` instead of `/api/v1/orders`, leading to HTTP 404 responses.
