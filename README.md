@@ -171,3 +171,45 @@ docker compose up -d
 ✔ Event publishing working
 
 ✔ Docker Compose deployment complete
+
+## Sprint 4
+
+Consumer Service initialized.
+
+Current progress:
+
+- Consumer project created
+- Shared logging
+- Environment configuration
+- Docker ready
+
+### Sprint 4 - Kafka Infrastructure Validation
+
+Verified:
+
+- Kafka broker is healthy
+- Producer publishes successfully
+- Topic exists
+- Console consumer receives events
+- Consumer groups function correctly
+
+### Consumer Service
+
+Implemented a Kafka consumer that:
+
+- Connects to Kafka
+- Joins a consumer group
+- Subscribes to `order.created`
+- Logs incoming events
+
+
+### Sprint 4 - Dockerized Event Flow
+
+Verified end-to-end event processing using Docker Compose.
+
+Flow:
+
+Client
+→ Producer Service
+→ Apache Kafka
+→ Consumer Service

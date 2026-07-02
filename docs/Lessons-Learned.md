@@ -149,3 +149,33 @@ This document captures the important architectural, infrastructure, and implemen
 - Logging should be structured from day one.
 - Docker networking differs from host networking.
 - Kafka advertised listeners are one of the most common deployment pitfalls.
+
+# Sprint 4 - Consumer Initialization
+
+## Key Learnings
+
+- Producer and Consumer should share common logging standards.
+- Separate environment files simplify local and Docker execution.
+- Mirroring project structure across services improves maintainability.
+
+## Kafka Validation
+
+### Key Learnings
+
+- Validate Kafka independently before debugging application consumers.
+- A console consumer is the fastest way to verify end-to-end message flow.
+- Kafka consumer groups were verified before implementing the Consumer Service.
+
+## Kafka Consumer
+
+- Validate Kafka infrastructure before implementing application consumers.
+- Consumer groups distribute work while ensuring each message is processed by only one consumer in the group.
+- Graceful shutdown allows the consumer to leave the group cleanly and reduces unnecessary rebalancing.
+
+## Kafka Consumer Groups
+
+### Key Learnings
+
+- Single-node Kafka requires explicit replication settings for internal topics.
+- Kafka should be validated inside Docker before implementing application logic.
+- Verify consumer groups before debugging KafkaJS consumers.
