@@ -1,0 +1,15 @@
+_format_version: "3.0"
+
+services:
+  - name: producer-service
+    url: http://producer-service:3000
+
+    routes:
+      - name: producer-route
+        paths:
+          - /api/v1/orders
+
+        methods:
+          - POST
+
+        strip_path: false

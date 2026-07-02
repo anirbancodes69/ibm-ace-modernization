@@ -218,3 +218,9 @@ This mirrors IBM ACE Database Node responsibilities while keeping the service la
 Validation should occur after message transformation and before persistence.
 
 By validating the canonical model instead of the incoming event, downstream systems always receive a consistent enterprise data model regardless of the source payload.
+
+## Sprint 6 - Milestone 1
+
+Introducing an API Gateway decouples clients from backend services.
+
+Clients communicate only with Kong, allowing routing, authentication, rate limiting, and observability to be implemented centrally without changing application code.

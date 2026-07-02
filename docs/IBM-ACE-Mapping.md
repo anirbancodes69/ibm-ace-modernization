@@ -65,3 +65,13 @@ IBM ACE Mapping
 Validation Node (Compute)
         ↓
 Order Validator (Zod)
+
+## Sprint 6 - API Gateway
+
+IBM DataPower / API Connect
+
+↓
+
+Kong Gateway
+
+The API Gateway becomes the single entry point into the integration platform.

@@ -260,3 +260,20 @@ Order Repository
       │
       ▼
 PostgreSQL
+
+Client
+   │
+   ▼
+Kong Gateway
+   │
+   ▼
+Producer Service
+   │
+   ▼
+Kafka
+   │
+   ▼
+Consumer Service
+   │
+   ▼
+PostgreSQL
