@@ -202,3 +202,13 @@ Repositories encapsulate persistence logic and isolate database operations from 
 The Order Service now focuses only on orchestration, while the Order Repository handles SQL interaction.
 
 This separation improves maintainability and mirrors IBM ACE Database node responsibilities.
+
+## Sprint 5 - Milestone 2
+
+A repository layer was introduced to isolate database operations from business orchestration.
+
+The event processing pipeline now follows:
+
+Kafka Consumer → Service → Transformer → Repository → PostgreSQL
+
+This mirrors IBM ACE Database Node responsibilities while keeping the service layer focused on orchestration.
