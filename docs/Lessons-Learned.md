@@ -194,3 +194,11 @@ The consumer should only:
 Business orchestration belongs in a dedicated service layer, while message transformation belongs in a transformer layer.
 
 This separation closely mirrors IBM App Connect Enterprise, where MQ Input, Compute, and Mapping nodes each have distinct responsibilities.
+
+## Sprint 5 - Milestone 2
+
+Repositories encapsulate persistence logic and isolate database operations from business services.
+
+The Order Service now focuses only on orchestration, while the Order Repository handles SQL interaction.
+
+This separation improves maintainability and mirrors IBM ACE Database node responsibilities.

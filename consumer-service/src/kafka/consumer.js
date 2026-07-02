@@ -41,6 +41,7 @@ async function startConsumer() {
         } catch (error) {
           logger.error("Failed to process Kafka message", {
             error: error.message,
+            stack: error.stack,
             topic,
             partition,
             offset: message.offset,

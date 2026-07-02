@@ -224,3 +224,21 @@ Order Transformer
       │
       ▼
 Canonical Order
+
+
+Kafka Consumer
+      │
+      ▼
+Order Service
+      │
+      ▼
+Order Transformer
+      │
+      ▼
+Canonical Order
+      │
+      ▼
+Order Repository
+      │
+      ▼
+PostgreSQL

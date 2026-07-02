@@ -28,3 +28,30 @@ Mapping Node
 Canonical Order
         ↓
 Enterprise Canonical Data Model
+
+## Sprint 5 - Milestone 2
+
+Added an Order Repository responsible for persisting canonical orders into PostgreSQL.
+
+IBM ACE Mapping
+
+Order Repository
+        ↓
+Database Node
+
+PostgreSQL
+        ↓
+Enterprise Database
+
+
+## Repository Layer
+
+IBM ACE Database Node
+
+↓
+
+Order Repository
+
+↓
+
+PostgreSQL

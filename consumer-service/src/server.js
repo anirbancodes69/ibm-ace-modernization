@@ -4,11 +4,14 @@ const app = require("./app");
 const logger = require("./utils/logger");
 
 const { connectDatabase } = require("./config/database");
-const { startConsumer, consumer } = require("./kafka/consumer");
+const {
+  startConsumer,
+  shutdown: shutdownConsumer,
+} = require("./kafka/consumer");
 
 const PORT = process.env.PORT || 3001;
 
-const startServer = async () => {
+async function startServer() {
   try {
     await connectDatabase();
     await startConsumer();
@@ -17,20 +20,33 @@ const startServer = async () => {
       logger.info(`Consumer Service running on port ${PORT}`);
     });
   } catch (error) {
-    logger.error("Failed to start Consumer Service", error);
+    logger.error("Failed to start Consumer Service", {
+      error: error.message,
+      stack: error.stack,
+    });
+
     process.exit(1);
   }
-};
+}
 
 startServer();
 
-const shutdown = async () => {
-  logger.info("Shutting down Consumer Service");
+async function shutdown() {
+  try {
+    logger.info("Shutting down Consumer Service");
 
-  await consumer.disconnect();
+    await shutdownConsumer();
 
-  process.exit(0);
-};
+    process.exit(0);
+  } catch (error) {
+    logger.error("Error during shutdown", {
+      error: error.message,
+      stack: error.stack,
+    });
+
+    process.exit(1);
+  }
+}
 
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
