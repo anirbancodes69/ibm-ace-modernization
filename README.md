@@ -171,3 +171,14 @@ docker compose up -d
 ✔ Event publishing working
 
 ✔ Docker Compose deployment complete
+
+## Sprint 4
+
+Consumer Service initialized.
+
+Current progress:
+
+- Consumer project created
+- Shared logging
+- Environment configuration
+- Docker ready

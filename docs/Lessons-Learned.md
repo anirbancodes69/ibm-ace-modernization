@@ -149,3 +149,11 @@ This document captures the important architectural, infrastructure, and implemen
 - Logging should be structured from day one.
 - Docker networking differs from host networking.
 - Kafka advertised listeners are one of the most common deployment pitfalls.
+
+# Sprint 4 - Consumer Initialization
+
+## Key Learnings
+
+- Producer and Consumer should share common logging standards.
+- Separate environment files simplify local and Docker execution.
+- Mirroring project structure across services improves maintainability.
