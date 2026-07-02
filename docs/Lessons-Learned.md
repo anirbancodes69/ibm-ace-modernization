@@ -171,3 +171,11 @@ This document captures the important architectural, infrastructure, and implemen
 - Validate Kafka infrastructure before implementing application consumers.
 - Consumer groups distribute work while ensuring each message is processed by only one consumer in the group.
 - Graceful shutdown allows the consumer to leave the group cleanly and reduces unnecessary rebalancing.
+
+## Kafka Consumer Groups
+
+### Key Learnings
+
+- Single-node Kafka requires explicit replication settings for internal topics.
+- Kafka should be validated inside Docker before implementing application logic.
+- Verify consumer groups before debugging KafkaJS consumers.

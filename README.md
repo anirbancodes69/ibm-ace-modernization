@@ -201,3 +201,15 @@ Implemented a Kafka consumer that:
 - Joins a consumer group
 - Subscribes to `order.created`
 - Logs incoming events
+
+
+### Sprint 4 - Dockerized Event Flow
+
+Verified end-to-end event processing using Docker Compose.
+
+Flow:
+
+Client
+→ Producer Service
+→ Apache Kafka
+→ Consumer Service
