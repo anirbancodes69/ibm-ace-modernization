@@ -165,3 +165,9 @@ This document captures the important architectural, infrastructure, and implemen
 - Validate Kafka independently before debugging application consumers.
 - A console consumer is the fastest way to verify end-to-end message flow.
 - Kafka consumer groups were verified before implementing the Consumer Service.
+
+## Kafka Consumer
+
+- Validate Kafka infrastructure before implementing application consumers.
+- Consumer groups distribute work while ensuring each message is processed by only one consumer in the group.
+- Graceful shutdown allows the consumer to leave the group cleanly and reduces unnecessary rebalancing.

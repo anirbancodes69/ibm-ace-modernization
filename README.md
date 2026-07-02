@@ -192,3 +192,12 @@ Verified:
 - Topic exists
 - Console consumer receives events
 - Consumer groups function correctly
+
+### Consumer Service
+
+Implemented a Kafka consumer that:
+
+- Connects to Kafka
+- Joins a consumer group
+- Subscribes to `order.created`
+- Logs incoming events
